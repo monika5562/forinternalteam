@@ -10,4 +10,3 @@ Welcome to Protein Metrics's documentation
    :maxdepth: 5
    
    applicationnote.rst
-   internal.rst

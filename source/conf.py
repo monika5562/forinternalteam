@@ -34,6 +34,8 @@ extensions = ['sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode']
 
+
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['files_templates']
 
@@ -70,7 +72,9 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = []
+exclude_patterns = ['**/*internal*']
+if tags.has('internalmode'):
+    exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -84,7 +88,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'default'
+html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
